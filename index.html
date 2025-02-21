@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(181, 136, 144);
+            margin: 20px;
+        }
+
+        fieldset {
+
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            text-decoration: underline;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: square;
+            text-align: left;
+            font-size: 1.2rem;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .mode-btn {
+            padding: 10px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .friend-btn {
+            background-color: rgb(39, 59, 69);
+            color: white;
+        }
+
+        .computer-btn {
+            background-color: rgb(171, 85, 202);
+            color: white;
+        }
+
+        .mode-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+</head>
+<body>
+    <fieldset align="center">
+        <img src="tic1.png" alt="Tic Tac Toe Logo" width="75" height="50" style="vertical-align: middle; margin-right: 10px;">
+        TIC TAC TOE
+    </fieldset>
+    
+    <h2>HOW TO PLAY</h2>
+    <ul>
+        <li>This is a game for two players.</li>
+        <li>Each player gets one symbol ('X' or 'O').</li>
+        <li>It is a board of 9 boxes.</li>
+        <li>Players take turns to place their assigned symbol ('X' or 'O').</li>
+        <li>The player who places their symbol in any of the following patterns wins:</li>
+        <ul>
+            <li>[0, 1, 2] - Top row</li>
+            <li>[3, 4, 5] - Middle row</li>
+            <li>[6, 7, 8] - Bottom row</li>
+            <li>[0, 3, 6] - Left column</li>
+            <li>[1, 4, 7] - Middle column</li>
+            <li>[2, 5, 8] - Right column</li>
+            <li>[0, 4, 8] - Left diagonal</li>
+            <li>[2, 4, 6] - Right diagonal</li>
+        </ul>
+        <li>If no player forms any of the above patterns, the match is a draw.</li>
+    </ul><br>
+    
+
+    <div class="button-container">
+        <button class="mode-btn friend-btn" onclick="startFriendGame()">START GAME</button>
+    </div>
+    <div id="game-container"></div>
+
+    <script>
+        function startFriendGame() {
+            window.location.href = "friend-game.html";
+      }
+ </script>
+    
+</body>
+</html>
